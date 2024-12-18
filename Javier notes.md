@@ -1,0 +1,12 @@
+- The feature flag solution has been implemented using conditional beans, it could be implemented in several alternative ways: Unleash, read properties, refresh context ...
+- It is not clear what to validate in the file so I've made some easy assumptions
+- I've tried to follow hexagonal architecture, I found it's a nice way to organise and standarise how microservices code and packages structure
+- For testing, I've primarily used the libraries MockK, AssertK, JsonUnit, MockMvc and WebTestClient. However, there are other capable libraries available
+- WebTestClient although it comes from webflux project, Spring encourages it to use it everywhere, even in non reactive projects (bring the dependency in test context only), it supports:
+  - Integration Test
+  - Spring MVC test
+  - Mock servlet: mock security, mock user 
+  - deserialize to Object, String, arrays, list
+  - json assertions
+  - reactive and non-reactive
+- For a quick overview just check **FileParsingIntegrationTest** 
